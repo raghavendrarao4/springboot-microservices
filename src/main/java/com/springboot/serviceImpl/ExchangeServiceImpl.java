@@ -34,6 +34,7 @@ public class ExchangeServiceImpl implements ExchangeService {
 		ExchangeValue exchangeValue = new ExchangeValue(1l,from,to,new BigDecimal(environment.getProperty("conversionFactor1"))); 
 		exchangeValue.setPort(Integer.parseInt(environment.getProperty("local.server.port")));
 		exchangeValue.setConvertedValue(exchangeValue.getConversionMultiple().multiply(new BigDecimal(1)));
+		exchangeValue.setQuantity(1);
 		return exchangeValue;		
 	}
 }
