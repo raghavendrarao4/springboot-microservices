@@ -38,7 +38,6 @@ class ExchangeControllerTestClass {
 	void testRetrieveExchangeValue_With_Two_Args() {
 
 		when(exchangeService.retrieveExchangeValue("eur", "inr")).thenReturn(exchangeValue1);
-		when(exchangeService.retrieveExchangeValue("eur", "inr", 10)).thenReturn(exchangeValue2);
 
 		ExchangeValue exchangeValue=mockExchangeController.retrieveExchangeValue("eur", "inr");
 		assertNotNull(exchangeValue);
