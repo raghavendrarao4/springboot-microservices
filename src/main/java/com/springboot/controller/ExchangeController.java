@@ -22,14 +22,14 @@ public class ExchangeController {
 	
 	@GetMapping("/from/{from}/to/{to}")
 	public ExchangeValue retrieveExchangeValue(@PathVariable String from, @PathVariable String to) {
-		LOGGER.info("*****ExchangeController.retrieveExchangeValue with from to");
+		LOGGER.info("*****ExchangeController.retrieveExchangeValue with parameters: from, to");
 		ExchangeValue exchangeValue = exchangeService.retrieveExchangeValue(from, to);		
 		return exchangeValue;
 	}
 
 	@GetMapping("/from/{from}/to/{to}/quantity/{quantity}")
 	public ExchangeValue retrieveExchangeValue(@PathVariable String from, @PathVariable String to, @PathVariable Integer quantity) {
-		LOGGER.info("*****ExchangeController.retrieveExchangeValue with from to with quantity");
+		LOGGER.info("*****ExchangeController.retrieveExchangeValue with with parameters: from, to, quantity");
 		ExchangeValue exchangeValue = exchangeService.retrieveExchangeValue(from, to, quantity);		
 		return exchangeValue;
 	}
